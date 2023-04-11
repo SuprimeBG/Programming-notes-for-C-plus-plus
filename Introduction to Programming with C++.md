@@ -1,7 +1,8 @@
-#Introduction to Programming with C++#
+# Introduction to Programming with C++
 
-Pointers
---------
+<details>
+<summary><b>Pointers</b></summary>
+
 
 *   **Array and pointers**
 ```c++
@@ -53,6 +54,8 @@ Pointers
         int max = luckyNumbers[0];
         getMinAndMax(luckyNumbers, 5, &min, &max);
     }
+```
+                                  
 ```c++
     int getMin(int numbers[], int size) {
         int min = numbers[0];
@@ -85,6 +88,7 @@ Pointers
     
     }
 ```
+    
 *   **Dynamic arrays**
 ```c++
     int main()
@@ -109,6 +113,7 @@ Pointers
         luckyNumbers = NULL;
     }
 ```
+                                         
 *   **Multidimentionals arrays (two-dimentionals arrays)**
 ```c++
     int main()
@@ -131,10 +136,10 @@ Pointers
         matrix = NULL;
         
     }
-```c++
+```
 \*\*ptr - pointer to a pointer
 
-<!--Explanation file is here -->
+[Explanation of multidimentional arrays in C++](https://docs.google.com/spreadsheets/d/1hxaGMNQSqil0xuskA98oDDLKojDyHlfQOqB8ws4b2k0/edit?usp=sharing)
 
 *   **Function Pointers**
 
@@ -175,3 +180,35 @@ We use it for code optimization
 *   **Smart Pointers**
 
 unique, shared, weak
+    
+</details>
+    
+<details>
+    
+<summary><b>CONST</b></summary>
+
+*   **Some common uses of CONST**
+    
+```c++
+    const int* ptr = new int; 
+    int const* ptr = new int; 
+    //key is cont is before the * (asterisk)
+    //both const here are the same.
+    //const here means we cannot modify the content of the pointer
+    
+    *ptr = 5 //gives error
+    ptr = (int*)
+    
+    /*--------------------------------------------------------------------------*/
+    
+    int * const ptr = new int; 
+    
+    /*const here means we can change the content, but we cannot
+    reassign the pointer to point to something else*/
+    
+    /*--------------------------------------------------------------------------*/
+    
+    const int* const ptr = new const int;
+  ```
+        
+</details>
